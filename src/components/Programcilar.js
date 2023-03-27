@@ -15,6 +15,7 @@ import React from 'react';
 /* ADIM 0  */
 
 
+
 // Bu değişkeni YALNIZCA bir state dilimini başlatmak için kullanın!
 // JSX'te şu anda bu kuralı çiğneyen bir şey var...
 // Export syntaxı, test kitaplığının diziyi içe aktarabilmesi için gereklidir.
@@ -30,21 +31,23 @@ export const enIyilerListesi = [
 export default function Programcilar() {
   // İki state dilimine ihtiyacımız olduğundan, state hooku iki kez kullanmamız gerekecek..
   // Bir yanda programcılar listesi, diğer yanda öne çıkan programcının idsi.
-
+  const [programcilar, setProgramcilar] = useState(enIyilerListesi);
+  const [programciId, setProgramciId] = useState(null);
 	
   const oneCikaninIsmi = () => {
     // Bunu sona bırakın!
     // Bu bir event handler değil, yardımcıdır. Kullanımını JSX'te gözlemleyin.
     // Öne çıkan geliştiricinin _isim_ adını döndürmek için her iki state dilimini kullanacak.
     // Closureların güzelliği, argümanlar yoluyla bilgi enjekte etmeye gerek kalmadan programın 
-	// bu bölgesinden her iki state dilimini de "görebilmemiz"dir.
+	  // bu bölgesinden her iki state dilimini de "görebilmemiz"dir.
   };
 
   const stil = {
     fontSize: '1.5em',
     marginTop: '0.5em',
-    color: 'royalblue', // 🤔 kutlarken renk gold'a dönecek
-  };
+    color: 'royalblue', // 🤔 kutlarken renk gold'a dönecek.
+
+  }; 
 
   return (
     <div className='widget-programmers container'>
